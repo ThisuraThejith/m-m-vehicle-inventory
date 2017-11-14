@@ -1,0 +1,13 @@
+===========================
+Run backend
+===========================
+cd backend 
+npm install
+node main.js
+
+===========================
+Run frontend
+===========================
+http-server -c-1 
+    OR
+http-server -c-1 -p(desired port number)
