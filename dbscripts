@@ -1,0 +1,43 @@
+--1)Creating database
+
+create database `inventory`;
+
+use `inventory`;
+
+--2)Creating 'Product' Table
+
+CREATE TABLE `Product` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `Name` varchar(100) NOT NULL,
+  `Description` varchar(5000),
+  `Category` varchar(100) NOT NULL,
+  `Code` varchar(50) NOT NULL,
+  PRIMARY KEY (ID),
+  CONSTRAINT UC_Product UNIQUE (Code)
+);
+
+--3)Creating 'Intake' Table
+
+CREATE TABLE `Intake` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `Date` DATE NOT NULL,
+  `Code` varchar(50) NOT NULL,
+  `PurchaseUnitPrice` DECIMAL(12,2) NOT NULL,
+  `SellingUnitPrice` DECIMAL(12,2) NOT NULL,
+  `Amount` int NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (Code) REFERENCES Product (Code) ON DELETE CASCADE
+ ON UPDATE CASCADE
+)
+
+--4)Creating 'Sales' Table
+
+CREATE TABLE `Sales` (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `Date` DATE NOT NULL,
+  `Code` varchar(50) NOT NULL,
+  `Amount` int NOT NULL,
+  PRIMARY KEY (ID),
+  FOREIGN KEY (Code) REFERENCES Product (Code) ON DELETE CASCADE
+ ON UPDATE CASCADE
+)
