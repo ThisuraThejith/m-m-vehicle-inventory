@@ -1,0 +1,63 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Vehicle Parts
+        <small>Adding vehicle parts to the system</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#stock"><i class="fa fa-users"></i>Editors</a></li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+      <!-- Default box -->
+        <div class="col-md-8">
+            <div class="box">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Vehicle Part</h3>
+
+                    <div class="box-body">
+                        <!-- form start -->
+                        <form >
+                            <div class="box-body">
+                                <div class="form-group">
+                                    <label for="name" class="control-label">Name</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" requried="requried" id="name" ng-model="name" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="description" class="control-label">Description</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" requried="requried" id="description" ng-model="description" placeholder="Description">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="category" class="control-label">Category</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" requried="requried" id="category" ng-model="category" placeholder="Category">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="code">Code</label>
+                                    <div>
+                                        <input type="text" class="form-control" requried="requried" id="code" ng-model="code" placeholder="Code">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                            <div class="box-footer">
+                                <button ng-click="resetParts()" class="btn btn-default">Cancel</button>
+                                <button ng-click="addParts()" class="btn btn-primary pull-right">Add</button>
+                            </div>
+                            <!-- /.box-footer -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
